@@ -1,0 +1,8 @@
+<!-- res/drawable/half_and_half_background.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:top="0dp"
+        android:bottom="350dp"
+        android:drawable="@color/half_one"/>
+</layer-list>
