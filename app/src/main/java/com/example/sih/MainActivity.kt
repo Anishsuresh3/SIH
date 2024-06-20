@@ -48,16 +48,6 @@ class MainActivity : AppCompatActivity() {
             btnStop.visibility = View.INVISIBLE
             btnStart.visibility = View.VISIBLE
         }
-//        socketManager = WebsocketManager.getInstance()
-//        socketManager.connectWebSocket()
-//        socketManager = socketmanager(application)
-//        socketManager.setupWebSocketService()
-//        socketManager.observeConnection()
-//        lifecycleScope.launch {
-//            delay(10000)
-//            socketManager.closeWebSocket()
-//            println("Stopped")
-//        }
     }
 
     fun stopVpn(){
@@ -82,7 +72,7 @@ class MainActivity : AppCompatActivity() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == VPN_REQUEST_CODE && resultCode== Activity.RESULT_OK){
-            println("ON ACtiviytyt")
+            println("ON Activity")
             val intent = Intent(this, LocalVpnService::class.java)
             intent.putExtra("lifecycleOwnerReference", this::class.java.name)
             startForegroundService(intent)
